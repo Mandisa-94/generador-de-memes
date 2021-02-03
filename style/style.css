@@ -73,7 +73,7 @@
 }
 
 .botonera{
-    height: 2vh;
+    height: auto;
     width: auto;
     display: flex;
     color: rgb(51, 190, 190);
@@ -82,11 +82,10 @@
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 0.15em;
-    /* padding: 15px 20px; */
     position: relative;
     font-family: var(--Tituloh2h3);
     font-size: 1.5rem;
-    padding: 3.5% 3%;
+    padding: 3.5% 4%;
 }
 
 .botonera, .botonera::after, .botonera::before {
@@ -176,9 +175,9 @@
 
 .descarga-meme{
     height: auto;
-    width: 15%;
+    width: auto;
     display: flex;
-    padding: 1%;
+    padding: 1% 2%;
     background-color:  rgb(139, 139, 139);
     margin: 2% 0;
     color: white;
