@@ -18,12 +18,17 @@
     --Tituloh1: bigNoodleTitling;
     --Tituloh2h3: bigNoodleTitling,Oblique;
 }
-body{
-    background-image: url(/MODULO-2/Generador\ de\ \ memes/img/background.jpg);
+/* body{
+    background-image: url(.img);
     background-size: cover;
     height: 100vh;
+} */
+.background-page{
+    position: absolute;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
 }
-
 
 .header{
     background: #98B1FC;
@@ -127,6 +132,7 @@ body{
     align-items: center;
     margin-top: 3%;
     flex-direction: column;
+    position: absolute;
 }
 
 .box-meme{
@@ -137,7 +143,7 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    border: solid 1px rgb(33, 33, 73);;
+    border: solid 1px rgb(33, 33, 73);
 }
 
 .box-texto-meme {
