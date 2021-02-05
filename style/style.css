@@ -18,11 +18,9 @@
     --Tituloh1: bigNoodleTitling;
     --Tituloh2h3: bigNoodleTitling,Oblique;
 }
-/* body{
-    background-image: url(.img);
-    background-size: cover;
+body{
     height: 100vh;
-} */
+} 
 .background-page{
     position: absolute;
     background-size: cover;
@@ -233,7 +231,7 @@ h3{
     opacity: 0.9;  
 }
 
-.box-img-options{
+.box-img-options, .box-text-options{
     display: flex;
     height: auto;
     width: 100%;
@@ -241,13 +239,13 @@ h3{
     justify-content: center;
     flex-direction: column;
     padding: 2% 0;
-    /* background-color: yellow; */
+    
 }
 
-.box-url-img-options, .box-fondo-tonalidades-img-options{
+.box-url-img-options, .box-fondo-tonalidades-img-options, .box-superior-text-options, .box-inferior-text-options, .box-fuente-text-options, .box-color-fondo-text-options, .box-contorno-text-options, .box-espaciado-text-options, .box-interlineado-text-options{
     display: flex;
     flex-direction: column;
-    /* background-color: violet; */
+     background-color: rgb(33, 33, 73); 
     width: 90%;
     height: auto;
     padding: 2%;
@@ -286,14 +284,13 @@ h3{
     margin-top: 5px;
     margin-left: 2%;
     border: 0;
-    
 }
 
 .black-color-img-fondo{
     position: absolute;
     left: 35px;
     top: 50%;
-    transform: translateY(-50%);
+    transform: translateY(-50%); 
     font-size: 1.3rem;
     margin-left: 2%;
     font-family: var(--Tituloh2h3);
@@ -378,6 +375,223 @@ h3{
     color:  rgb(71, 71, 71);
     background-color: white;
 }
+
+
+
+
+
+
+.top-text-options, .bottom-text-options, .button-impact-text-options{
+    width: 100%;
+    height: auto;
+    padding: 3%;
+    font-size: 1.2rem;
+    font-family: var(--Tituloh2h3);
+}
+
+.box-fuente-text-options, .box-color-fondo-text-options, .box-contorno-text-options{
+    height: 12vh;
+}
+
+.no-superior-text-options, .no-bottom-text-options{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 4%;
+    align-items: center;
+}
+
+.input-sin-texto-sup, .input-sin-texto-i {
+    margin-right: 2%;
+    width: 20px;
+    height: 20px;
+}
+
+.label-sin-texto-s, .label-sin-texto-i{
+    font-family: var(--Tituloh2h3);
+    font-size: 1.2rem;
+    color: white;
+}
+
+.box-tamaño-centrado-text{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    margin-top: 2%;
+}
+
+.box-tamaño-text-option{
+    width: 50%;
+    height: auto;
+    display: flex;
+    align-items: flex-start;   
+}
+
+
+.input-tamaño-fuente{
+    padding: 4%;
+    width: 90%;
+    text-align: center;
+    font-family: var(--Tituloh2h3);
+    font-size: 1.2rem;
+    border-style: none;
+}
+
+.box-centrado-text-options{
+    width: 50%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button-left-text-options, .button-center-text-options, .button-right-text-options{  
+    padding: 4%;
+    width: 30%;
+    border-style: none;
+    background-color: rgb(71, 71, 71);
+    color: white;
+}
+
+.button-left-text-options, .button-center-text-options, .button-right-text-options, .button-left-text-options::after, .button-center-text-options::after, .button-right-text-options::after, .button-left-text-options::before, .button-center-text-options::before, .button-right-text-options::before {
+    transition: all .5s;
+}
+
+.button-left-text-options:hover, .button-center-text-options:hover, .button-right-text-options:hover{
+    color:  rgb(71, 71, 71);
+    background-color: white;
+}
+
+
+.button-center-text-options{
+    margin: 0 4%;
+}
+
+.buttons-color-fondo-text-options{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 3%;
+}
+
+.box-button-color-text-options, .box-button-fondo-text-options{
+    width: 48%;
+    height: auto;
+
+}
+
+.button-color-text-options, .button-fondo-text-options{
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin-top: 2%;
+    display: flex;
+    align-items: flex-start;
+    text-align: center;
+    background-color: rgb(33, 33, 73);
+    /* border-style: none; */
+    cursor: pointer;
+}
+
+.input-color-texto, .input-color-fondo-texto {
+    position: relative;
+    display: flex;
+    height: 30px;
+    width: 30px;
+    border-radius: 50px;
+    background-color: transparent;
+    margin-left: 2%;
+    border: 0;
+
+}
+
+.color-text-options, .fondo-text-options{
+    position: absolute;
+    left: 35px;
+    top: 50%;
+    transform: translateY(-50%); 
+    font-size: 1.3rem;
+    margin-left: 2%;
+    font-family: var(--Tituloh2h3);
+    color: white;
+}
+
+.box-transparent-text-options{
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+}
+
+.input-transparent-text{
+    margin-right: 2%;
+    width: 20px;
+    height: 20px;
+}
+.label-transparent-text{
+    font-size: 1.2rem;
+    font-family: var(--Tituloh2h3);
+    color: white;
+}
+
+.buttons-ninguno-claro-oscuro-text-options{
+    width: 100%;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.button-ninguno-text-options, .button-claro-text-options, .button-oscuro-text-options{
+    width: 30%;
+    height: auto;
+    padding: 4%;
+    font-family: var(--Tituloh2h3);
+    font-size: 1.2rem;
+    background-color: rgb(71, 71, 71);
+    color: white;
+    border-style: none;
+    cursor: pointer;
+}
+
+.button-ninguno-text-options, .button-claro-text-options, .button-oscuro-text-options, .button-ninguno-text-options::after, .button-claro-text-options::after, .button-oscuro-text-options::after, .button-ninguno-text-options::before, .button-claro-text-options::before, .button-oscuro-text-options::before{
+    transition: all .5s;
+}
+
+.button-ninguno-text-options:hover, .button-claro-text-options:hover, .button-oscuro-text-options:hover{
+    color:  rgb(71, 71, 71);
+    background-color: white;
+}
+
+.input-espaciado-number-text-options, .interlineado-text-options{
+    width: 100%;
+    height: auto;
+    padding: 3%;
+    font-size: 1.2rem;
+    font-family: var(--Tituloh2h3);
+}
+
+.title-superior-text-options, .title-inferior-text-options, .tittle-color-text-options, .tittle-fono-text-options, .tittle-contorno-text-options, .tittle-espaciado-text-options, .tittle-interlineado-text-options{
+    color: white;
+}
+
+.box-titulo-fuente{
+    margin: 3% 0;
+}
+
+.tittle-fuente-text-option {
+    background-color: white;
+    width: 100%;
+    margin-bottom: 3%;
+}
+
+
+
+
 
 
  

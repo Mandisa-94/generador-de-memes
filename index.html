@@ -35,7 +35,7 @@
             </button>
         </div>
         <aside class="container-img-text">
-            <section class="box-img-options">
+            <!-- <section class="box-img-options">
                      <h2>IMAGEN</h2>
 
                      <article class="box-url-img-options">
@@ -63,10 +63,10 @@
                                 </div>  
                             </div>
                         </article> 
-                
+                 
                      
 
-                     <article class="box-filtros-img-options">
+                      <article class="box-filtros-img-options">
                          <h2>FILTROS</h2>
                             
                              <div class="brillo-img-options box-filtros">
@@ -116,33 +116,35 @@
                         </article>
 
                      <button class="restablecer-filtros-img-options" id="button-restablecer-filtros-img">RESTABLECER FILTROS</button>
-             </section>
+             </section> -->
 
 
-            <!-- <section class="container-text-options">
+            <section class="box-text-options">
                 <h2 class="title-tex-options">TEXTO</h2>
 
                 <article class="box-superior-text-options">
                     <h3 class="title-superior-text-options">SUPERIOR</h3>
-                    <textarea class="top-text-options" aria-label="Texto superior">TOP TEXT</textarea>
+                    <textarea class="top-text-options" aria-label="Texto superior" style="resize: none;">TOP TEXT</textarea>
                     <div class="no-superior-text-options">
-                        <input type="checkbox" id="no-superior-text" name="no-superior-text">
-                        <label for="no-superior-text">Sin texto superior</label>
+                        <input type="checkbox" id="no-superior-text" name="no-superior-text" class="input-sin-texto-sup">
+                        <label for="no-superior-text" class="label-sin-texto-s">Sin texto superior</label>
                     </div>
                 </article>
 
                 <article class="box-inferior-text-options">
                     <h3 class="title-inferior-text-options">INFERIOR</h3>
-                    <textarea class="bottom-text-options" aria-label="Texto inferior">BOTTOM TEXT</textarea>
+                    <textarea class="bottom-text-options" aria-label="Texto inferior" style="resize: none;">BOTTOM TEXT</textarea>
                     <div class="no-bottom-text-options">
-                        <input type="checkbox" id="no-bottom-text" name="no-bottom-text">
-                        <label for="no-bottom-text">Sin texto inferior</label>
+                        <input type="checkbox" id="no-bottom-text" name="no-bottom-text" class="input-sin-texto-i">
+                        <label for="no-bottom-text" class="label-sin-texto-i">Sin texto inferior</label>
                     </div>
                 </article>
 
-                <article class="box-fuente-text-options">
+               
+                    <div class="box-titulo-fuente">
                     <h2 class="tittle-fuente-text-option">FUENTE</h2>
-                    
+                    </div> 
+                <article class="box-fuente-text-options">
                     <select class="button-impact-text-options" id="button-impact-text" aria-label="opciones de fuentes">
                         <option value="Arial">Arial</option>
                         <option value="Arial Black">Arial Black</option>
@@ -155,47 +157,49 @@
                         <option value="Times New Roman">Times New Roman</option>
                     </select>
 
-                    <div class="box-tamaño-text-option">
-                        <input type="number" name="tamaño-text-options" id="tamaño-text-options" min="12" value="40" aria-label="tamaño de fuente">
-                    </div>
+                    <div class="box-tamaño-centrado-text">
+                         <div class="box-tamaño-text-option">
+                             <input type="number" name="tamaño-text-options" id="tamaño-text-options" min="12" value="40" aria-label="tamaño de fuente" class="input-tamaño-fuente">
+                         </div>
 
-                    <div class="box-centrado-text-options">
-                        <button class="button-left-text-options" id="button-left-text-options" aria-label="Alinear texto a la izquierda">
-                            <i></i>
-                        </button>
-                        <button class="button-center-text-options" id="button-center-text-options" aria-label="alinear texto al centro">
-                            <i></i>
-                        </button>
-                        <button class="button-right-text-options" id="button-right-text-options" aria-label="alinear texto a la derecha">
-                            <i></i>
-                        </button>
-                    </div>
+                         <div class="box-centrado-text-options">
+                             <button class="button-left-text-options" id="button-left-text-options" aria-label="Alinear texto a la izquierda">
+                                 <i class="fas fa-align-left"></i>
+                             </button>
+                             <button class="button-center-text-options" id="button-center-text-options" aria-label="alinear texto al centro">
+                                 <i class="fas fa-align-center"></i>
+                             </button>
+                             <button class="button-right-text-options" id="button-right-text-options" aria-label="alinear texto a la derecha">
+                                 <i class="fas fa-align-right"></i>
+                             </button>
+                         </div>
+                     </div>
                 </article>
 
 
                 <article class="box-color-fondo-text-options">
                     <div class="buttons-color-fondo-text-options">
-                        <div class="tittle-button-color-text-options">
+                        <div class="box-button-color-text-options">
                             <h3 class="tittle-color-text-options">COLOR</h3>
                             <div class="button-color-text-options">
-                                <input type="color" name="button-color-text" value="#000000" aria-label="Color de texto">
+                                <input type="color" name="button-color-text" value="#000000" aria-label="Color de texto" class="input-color-texto">
                                 <span class="color-text-options">#000000</span>
                             </div>
                         </div>
                         
 
-                        <div class="tittle-button-fondo-text-options">
+                        <div class="box-button-fondo-text-options">
                             <h3 class="tittle-fono-text-options">FONDO</h3>
                             <div class="button-fondo-text-options">
-                                <input type="color" name="button-fondo-text" value="#ffffff" aria-label="Color de fondo de texto">
+                                <input type="color" name="button-fondo-text" value="#ffffff" aria-label="Color de fondo de texto" class="input-color-fondo-texto">
                                 <span class="fondo-text-options">#ffffff</span>
                             </div>
                         </div>
                     </div>
 
                     <div class="box-transparent-text-options">
-                        <input type="checkbox" name="transparent" id="transparent-text-option">
-                        <label for="transparent">Fondo Transparente</label>
+                        <input type="checkbox" name="transparent" id="transparent-text-option" class="input-transparent-text">
+                        <label for="transparent" class="label-transparent-text">Fondo Transparente</label>
                     </div>
                 </article>
 
@@ -211,7 +215,7 @@
 
                 <article class="box-espaciado-text-options">
                     <h3 class="tittle-espaciado-text-options">ESPACIADO</h3>
-                    <input type="number" class="button-espaciado-number-text-options" min="10" max="50" value="35" aria-label="Espaciado">
+                    <input type="number" class="input-espaciado-number-text-options" min="10" max="50" value="35" aria-label="Espaciado" >
                 </article>
 
                 <article class="box-interlineado-text-options">
@@ -225,7 +229,7 @@
                         <option value="2.5">2.5</option>
                     </select>
                 </article>
-            </section> -->
+            </section>
         </aside>
 
     </main>
