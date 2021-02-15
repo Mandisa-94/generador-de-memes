@@ -84,6 +84,9 @@ body{
     font-family: var(--Tituloh2h3);
     font-size: 1.5rem;
     padding: 3.5% 4%;
+    background-color: transparent;
+    border: none;
+    outline: none;
 }
 
 .botonera, .botonera::after, .botonera::before {
@@ -116,7 +119,7 @@ body{
   }
 
   .check-botonera{
-      display: none;
+     display: none; 
   }
                                                       /*Fin botonera*/
 
@@ -139,12 +142,12 @@ body{
     background-color: white;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     border: solid 1px rgb(33, 33, 73);
 }
 
 .box-texto-meme {
-    height: auto;
+    height: 10vh;
     width: 100%;
     padding: 3%;
     font-size: 3rem;
@@ -153,15 +156,58 @@ body{
     text-shadow: 5px 0px 0px rgb(49, 47, 47);
     background-color: rgb(33, 33, 73);
     opacity: 0.9;
-    /* background: #98B1FC;
-    background: -webkit-radial-gradient(bottom, #98B1FC, #38228F);
-    background: -moz-radial-gradient(bottom, #98B1FC, #38228F);
-    background: radial-gradient(to top, #98B1FC, #38228F); */
 }
 
-.box-img-nene{
-    height: 40vh;
+ .contain-box-meme{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+} 
+.box-img-meme{
+     height: 40vh; 
+     width: 100%;
+     display: flex;
+     background-position: center;
+     background-repeat: no-repeat; 
+     background-position: center;
+     background-size: cover; 
 }
+
+.box-texto-meme-none{
+    display: none;
+}
+
+.sin-textos{
+    height: 100%;
+    width: 100%;
+    display: flex;
+     background-position: center;
+     background-repeat: no-repeat; 
+     background-position: center;
+     background-size: cover; 
+}
+
+.sin-sup {
+    height: 50vh;
+    width: 100%;
+    display: flex;
+     background-position: center;
+     background-repeat: no-repeat; 
+     background-position: center;
+     background-size: cover; 
+}
+.sin-inf{
+    height: 50vh;
+    width: 100%;
+    display: flex;
+     background-position: center;
+     background-repeat: no-repeat; 
+     background-position: center;
+     background-size: cover; 
+}
+
 
 .box-boton-decarga{
     width: 100%;
@@ -186,6 +232,8 @@ body{
     border-style: none;
     font-size: 1.2rem;
     font-family: var(--Tituloh2h3);
+    border-bottom-style: none;
+    border: none;
 }
 .descarga-meme, .descarga-meme::after, .descarga-meme::before{
     transition: all .5s;
@@ -197,6 +245,9 @@ body{
 
 
                                                                /*Fin container meme*/
+
+
+                                                               /*OPCIONES DE IMAGEN*/
 
 
 .container-img-text{
@@ -229,6 +280,9 @@ h3{
     display: flex;
     background-color: rgb(33, 33, 73);
     opacity: 0.9;  
+    color: white;
+    font-family: var(--Tituloh2h3);
+    font-size: 1rem;
 }
 
 .box-img-options, .box-text-options{
@@ -241,8 +295,22 @@ h3{
     padding: 2% 0;
     
 }
+.box-text-options {
+    display: none;
+}
 
-.box-url-img-options, .box-fondo-tonalidades-img-options, .box-superior-text-options, .box-inferior-text-options, .box-fuente-text-options, .box-color-fondo-text-options, .box-contorno-text-options, .box-espaciado-text-options, .box-interlineado-text-options{
+.box-url-img-options, .box-fondo-tonalidades-img-options{
+    display: flex;
+    flex-direction: column; 
+    width: 90%;
+    height: auto;
+    padding: 2%;
+    align-items: center;
+    justify-content: center;
+    margin: 1% 0;
+}
+
+.box-superior-text-options, .box-inferior-text-options, .box-fuente-text-options, .box-color-fondo-text-options, .box-contorno-text-options, .box-espaciado-text-options, .box-interlineado-text-options{
     display: flex;
     flex-direction: column;
      background-color: rgb(33, 33, 73); 
@@ -375,7 +443,10 @@ h3{
     color:  rgb(71, 71, 71);
     background-color: white;
 }
+                                                                        /*Fin opciones de imagen*/
 
+
+                                                                        /*OPCIONES DE TEXTO*/
 
 
 
@@ -453,6 +524,9 @@ h3{
     border-style: none;
     background-color: rgb(71, 71, 71);
     color: white;
+    outline: none;
+    border: none;
+    cursor: pointer;
 }
 
 .button-left-text-options, .button-center-text-options, .button-right-text-options, .button-left-text-options::after, .button-center-text-options::after, .button-right-text-options::after, .button-left-text-options::before, .button-center-text-options::before, .button-right-text-options::before {
@@ -556,6 +630,8 @@ h3{
     color: white;
     border-style: none;
     cursor: pointer;
+    outline: none;
+    border: none;
 }
 
 .button-ninguno-text-options, .button-claro-text-options, .button-oscuro-text-options, .button-ninguno-text-options::after, .button-claro-text-options::after, .button-oscuro-text-options::after, .button-ninguno-text-options::before, .button-claro-text-options::before, .button-oscuro-text-options::before{
@@ -589,8 +665,19 @@ h3{
     margin-bottom: 3%;
 }
 
+                                      /*Final opciones de texto*/
 
 
+                                      /*INICIO MODO-OSCURO*/
+
+:root {
+    --textoPrincipal: #ffffff;
+    --textoSecundario: #ffffff;
+    --textoTerciario: #ffffff;
+    --menuColor: #272323;
+    --panelColor: #645d5d;
+    --box-
+}     
 
 
 
