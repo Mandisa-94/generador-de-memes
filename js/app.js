@@ -1,12 +1,24 @@
+
+
 //Body//
 const etiquetaBody = document.getElementById ('etiqueta-body');
 const backgroundPage = document.getElementById ('background-page');
+const boxFiltros = document.querySelectorAll('.box-filtros');
+const tituloSecundario = document.querySelectorAll('h2');
+const tituloTerciario = document.querySelectorAll('h3');
+
+
 
 
 //ID de header//
 const imagenBotonera = document.getElementById ('imagen-botonera');
 const textoBotonera = document.getElementById ('texto-botonera');
 const oscuroBotonera = document.getElementById ('oscuro-botonera');
+const header = document.getElementById('header');
+const containerImgText = document.getElementById('container-img-text');
+const containerBotonera = document.getElementById ('container-botonera');
+const botonera = document.querySelectorAll('.botonera')
+
 
  
 //ID de opciones de IMG//
@@ -26,6 +38,11 @@ const hueFiltrosImg = document.getElementById ('hue-filtros-img');
 const saturadoFiltrosImg = document.getElementById ('saturado-filtros-img');
 const negativoFiltrosImg = document.getElementById ('negativo-filtros-img');
 const buttonRestablecerFiltrosImg = document.getElementById ('button-restablecer-filtros-img');
+const labelFiltrosImg = document.querySelectorAll ('.label-filtros-img')
+const inputFiltrosImg = document.querySelectorAll ('.input-filtros-img')
+const buttonTonalidadesColorImgOptions = document.getElementById('button-tonalidades-color-img-options')
+const titleUrlFondo = document.querySelectorAll('.title-url-fondo')
+
 
 
 
@@ -47,6 +64,14 @@ const buttonOscuroTextOptions = document.getElementById ('button-oscuro-text-opt
 const espaciadoTextOptions = document.getElementById ('espaciado-text-options');
 const interlineadoTextOptions = document.getElementById ('interlineado-text-options');
 const transparentTextOption = document.getElementById ('transparent-text-option');
+const boxTextoMeme = document.querySelectorAll ('.box-texto-meme');
+const boxTextDark = document.querySelectorAll ('.box-text-dark');
+const titleDarkText = document.querySelectorAll ('.title-dark-text');
+const titleFuenteDark = document.getElementById ('title-fuente-dark');
+const optionsDark = document.querySelectorAll ('.options-dark');
+const labelSinTextoS = document.getElementsByClassName ('label-sin-texto-s')[0]
+const labelSinTextoI = document.getElementsByClassName ('label-sin-texto-i')[0]
+const labelTransparentText = document.getElementsByClassName ('label-transparent-text')[0]
 
 //ID container meme//
 const boxTextoMemeTop = document.getElementById ('box-texto-meme-top');
@@ -316,7 +341,7 @@ negativoFiltrosImg.addEventListener ('change',()=>{
     boxImgMeme.style.filter = `invert(${negativoFiltrosImg.value})`;
 });
 
-//4- Reestablecer valores
+//4- Reestablecer valores 
 const filtros =()=>{boxImgMeme.style.filter = `opacity(${opacidadFiltrosImg.value})`,  boxImgMeme.style.filter = `opacity(${opacidadFiltrosImg.value})`, boxImgMeme.style.filter = `contrast(${contrasteFiltrosImg.value})`, boxImgMeme.style.filter = `blur(${desenfoqueFiltrosImg.value})`,  boxImgMeme.style.filter = `grayscale(${escalaFiltrosImg.value})`, boxImgMeme.style.filter = `sepia(${sepiaFiltrosImg.value})`,  boxImgMeme.style.filter = `hue-rotate(${hueFiltrosImg.value})`, boxImgMeme.style.filter = `saturate(${saturadoFiltrosImg.value})`, boxImgMeme.style.filter = `invert(${negativoFiltrosImg.value})`}
 
 buttonRestablecerFiltrosImg.addEventListener('click', ()=>{
@@ -338,9 +363,145 @@ buttonRestablecerFiltrosImg.addEventListener('click', ()=>{
 //DARK-MODE//
 oscuroBotonera.addEventListener('click', (e)=>{
     if (oscuroBotonera.checked === true){
-        backgroundPage.setAttribute ('src', './Img/backgroundDark-.JPG')
+        backgroundPage.setAttribute ('src', './Img/backgroundDark-.JPG');
+
+        header.setAttribute('class', 'header-dark');
+
+        containerImgText.setAttribute ('class', 'container-img-text-dark')
+
+        urlImgOptions.style.backgroundColor = 'cyan'
+        urlImgOptions.style.color = 'rgb(33, 33, 73)'
+        colorFondoImg.style.backgroundColor = 'cyan'
+        blackColorImgFondo.style.color = 'rgb(33, 33, 73)'
+        colorOptions.style.backgroundColor = 'cyan'
+        colorOptions.style.color = 'rgb(33, 33, 73)'
+        buttonTonalidadesColorImgOptions.style.backgroundColor= 'cyan'
+
+        for(let i = 0; i<tituloTerciario.length; i++ ){
+            tituloTerciario[i].style.color = 'white'
+        }
+
+        for(let i= 0; i < boxFiltros.length; i++){
+             boxFiltros[i].setAttribute('class', 'box-filtros-dark');
+            }
+
+        containerBotonera.setAttribute ('class', 'container-botonera-dark');
+        for(let i = 0; i<botonera.length; i++){
+            botonera[i].style.color = 'rgb(58, 190, 230)'
+        }
+        for(let i = 0; i<tituloSecundario.length; i++){
+            tituloSecundario[i].style.color = 'white'
+        }
+        for(let i = 0; i<labelFiltrosImg.length; i++){
+            labelFiltrosImg[i].style.color = 'rgb(33, 33, 73'
+        }
+        
+        for(let i = 0; i<inputFiltrosImg.length; i++){
+            inputFiltrosImg[i].style.backgroundColor = 'rgb(71, 71, 71)' 
+        }
+
+        for(let i = 0; i<boxTextoMeme.length; i++){
+            boxTextoMeme[i].style.backgroundColor = 'black' 
+        }
+
+        containBoxMeme.style.backgroundColor= 'black'
+
+
+
+        //Estilos Dark de TEXTO//
+        for(let i = 0; i<boxTextDark.length; i++){
+            boxTextDark[i].style.backgroundColor = 'cyan' 
+        }
+
+        for(let i = 0; i<titleDarkText.length; i++){
+            titleDarkText[i].style.color = 'rgb(33, 33, 73)'  
+        }
+
+        titleFuenteDark.style.backgroundColor = 'transparent'
+
+        for(let i = 0; i<optionsDark.length; i++){
+            optionsDark[i].style.backgroundColor = 'rgb(71, 71, 71)' 
+            optionsDark[i].style.color = 'white' 
+        }
+        labelSinTextoS.style.color = 'rgb(33, 33, 73)'
+        labelSinTextoI.style.color = 'rgb(33, 33, 73)'
+        labelTransparentText.style.color = 'rgb(33, 33, 73)'
+
+        
+         
+
     }else if (!oscuroBotonera.checked){
-        backgroundPage.setAttribute('src', './Img/background.jpg')
+        backgroundPage.setAttribute ('src', './Img/background.jpg');
+        header.setAttribute ('class', 'header');
+        containerImgText.setAttribute ('class', 'container-img-text');
+
+        urlImgOptions.style.backgroundColor = 'rgb(33, 33, 73)'
+        urlImgOptions.style.color = 'white'
+        colorFondoImg.style.backgroundColor = 'rgb(33, 33, 73)'
+        blackColorImgFondo.style.color = 'white'
+        colorOptions.style.backgroundColor = 'rgb(33, 33, 73)'
+        colorOptions.style.color = 'white'
+        buttonTonalidadesColorImgOptions.style.backgroundColor= 'rgb(33, 33, 73)'
+        for(let i = 0; i<tituloTerciario.length; i++ ){
+            tituloTerciario[i].style.color = 'white'
+        }
+
+        for(let i = 0; i<titleUrlFondo.length; i++ ){
+            titleUrlFondo[i].style.color = 'black'
+        }
+        
+        for(let i= 0; i < boxFiltros.length; i++){
+            boxFiltros[i].setAttribute ('class', 'box-filtros')    
+        }
+
+        containerBotonera.setAttribute ('class', 'container-botonera');
+        for(let i = 0; i<botonera.length; i++){
+            botonera[i].style.color = 'rgb(51, 190, 190)'
+        }
+
+        for(let i = 0; i<tituloSecundario.length; i++){
+            tituloSecundario[i].style.color = 'black'
+        }
+        for(let i = 0; i<labelFiltrosImg.length; i++){
+            labelFiltrosImg[i].style.color = 'white'
+        }
+
+        for(let i = 0; i<inputFiltrosImg.length; i++){
+            inputFiltrosImg[i].style.backgroundColor = 'cyan'
+        }
+
+        for(let i = 0; i<boxTextoMeme.length; i++){
+            boxTextoMeme[i].style.backgroundColor = 'rgb(33, 33, 73)' 
+        }
+
+        containBoxMeme.style.backgroundColor= 'white'
+
+        
+      
+
+        //Estilos Dark de TEXTO//
+
+        boxTextDark
+        for(let i = 0; i<boxTextDark.length; i++){
+            boxTextDark[i].style.backgroundColor = 'rgb(33, 33, 73)'  
+        }
+        
+        for(let i = 0; i<titleDarkText.length; i++){
+            titleDarkText[i].color = 'white'  
+        }
+
+        titleFuenteDark.style.backgroundColor = 'white'
+
+        for(let i = 0; i<optionsDark.length; i++){
+            optionsDark[i].style.backgroundColor = 'white'
+            optionsDark[i].style.color = 'black'  
+        }
+
+        labelSinTextoS.style.color = 'white'
+        labelSinTextoI.style.color = 'white'
+        labelTransparentText.style.color = 'white'
+
+      
+
     }
- 
 });

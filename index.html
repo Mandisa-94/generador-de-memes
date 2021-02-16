@@ -9,7 +9,8 @@
 </head>
 <body id="etiqueta-body">
    <img src="./Img/background.jpg" alt="imagen background" class="background-page" id="background-page">
-  <header class="header">
+
+  <header class="header" id="header">
       <h1 class="title-memes">Generador de Memes</h1>
       <nav class="container-botonera" id="container-botonera">
           <button class="img-boton botonera" id="imagen-botonera">IMAGEN</button>
@@ -36,25 +37,25 @@
                 &nbsp Descargar meme
             </button>
         </div>
-        <aside class="container-img-text">
+        <aside class="container-img-text" id="container-img-text">
 
              <section class="box-img-options" id="box-img-options">
                      <h2>IMAGEN</h2>
 
                      <article class="box-url-img-options">
-                         <h3 class="title-url-img-options">URL</h3>
+                         <h3 class="title-url-img-options title-url-fondo">URL</h3>
                          <input type="url" name="url" id="url-img-options" class="url-img-options" aria-label="Url de imagen">
                      </article>
 
                      <article class="box-fondo-tonalidades-img-options">
-                         <h3 class="title-fondo-img-options">FONDO</h3>
+                         <h3 class="title-fondo-img-options title-url-fondo">FONDO</h3>
                          <div class="color-fondo-buttons-img-options">
                              <div class="button-fondo-paleta-colores-img-options" id="color-fondo-img">
                                   <input type="color" name="color-fondo-img" id="color-fondo-img" class="color-fondo-img" value="#ffffff" aria-label="color de fondo de la imagen">
                                   <span class="black-color-img-fondo" id="black-color-img-fondo" aria-hidden="true">#ffffff</span>
                              </div>
 
-                             <div class="button-tonalidades-color-img-options">
+                             <div class="button-tonalidades-color-img-options" id="button-tonalidades-color-img-options">
                                  <select name="color-options" id="color-options" class="color-img-options" aria-label="Tonalidades de fondo de imagen">
                                       <option value="unset" selected>Ninguno</option>
                                       <option value="lighten">Aclarar</option>
@@ -72,47 +73,47 @@
                       <article class="box-filtros-img-options">
                          <h2>FILTROS</h2>
                             
-                             <div class="brillo-img-options box-filtros">
+                             <div class="brillo-img-options box-filtros" id="box-filtros">
                                  <label for="brillo" class="label-filtros-img">BRILLO</label>
                                  <input type="range" name="brillo" id="brillo-filtros-img" class="input-filtros-img" min="0" max="1" value="1" step="0.1">
                              </div>
 
-                             <div class="opacidad-img-options box-filtros">
+                             <div class="opacidad-img-options box-filtros" id="box-filtros">
                                  <label for="opacidad" class="label-filtros-img">OPACIDAD</label>
                                 <input type="range" name="opacidad" id="opacidad-filtros-img" class="input-filtros-img" min="0" max="1" value="1" step="0.1">
                             </div>
 
-                            <div class="contraste-img-options box-filtros">
+                            <div class="contraste-img-options box-filtros" id="box-filtros">
                                 <label for="contraste" class="label-filtros-img">CONTRASTE</label>
                                 <input type="range" name="contraste" id="contraste-filtros-img" class="input-filtros-img" min="0" max="1" value="100" step="0.1">
                             </div>
 
-                            <div class="desenfoque-img-options box-filtros">
+                            <div class="desenfoque-img-options box-filtros" id="box-filtros">
                                 <label for="desenfoque" class="label-filtros-img">DESENFOQUE</label>
                                 <input type="range" name="desenfoque" id="desenfoque-filtros-img" class="input-filtros-img" min="0" max="10" value="0" step="0.1">
                             </div>
 
-                            <div class="escala-img-options box-filtros">
+                            <div class="escala-img-options box-filtros" id="box-filtros">
                                 <label for="escala" class="label-filtros-img">ESCALA DE GRISES</label>
                                 <input type="range" name="escala" id="escala-filtros-img" class="input-filtros-img" min="0" max="100" value="1" step="0.1" value="0">
                             </div>
 
-                            <div class="sepia-img-options box-filtros">
+                            <div class="sepia-img-options box-filtros" id="box-filtros">
                                 <label for="sepia" class="label-filtros-img">SEPIA</label>
                                 <input type="range" name="sepia" id="sepia-filtros-img" class="input-filtros-img" min="0" max="100" value="0" step="0.1">
                             </div>
 
-                            <div class="hue-img-options box-filtros">
+                            <div class="hue-img-options box-filtros" id="box-filtros">
                                 <label for="hue" class="label-filtros-img">HUE</label>
                                 <input type="range" name="hue" id="hue-filtros-img" class="input-filtros-img" min="0" max="359" value="0" step="0.1">
                             </div>
 
-                            <div class="saturado-img-options box-filtros">
+                            <div class="saturado-img-options box-filtros" id="box-filtros">
                                 <label for="saturado" class="label-filtros-img">SATURADO</label>
                                 <input type="range" name="saturado" id="saturado-filtros-img" class="input-filtros-img" min="100" max="1000" value="100" step="10">
                             </div>
 
-                            <div class="negativo-img-options box-filtros">
+                            <div class="negativo-img-options box-filtros" id="box-filtros">
                                 <label for="negativo" class="label-filtros-img">NEGATIVO</label>
                                 <input type="range" name="negaivo" id="negativo-filtros-img" class="input-filtros-img" min="0" max="359" value="0" step="0.1">
                             </div>
@@ -125,30 +126,30 @@
              <section class="box-text-options" id= "box-text-options">
                 <h2 class="title-tex-options">TEXTO</h2>
 
-                <article class="box-superior-text-options">
-                    <h3 class="title-superior-text-options">SUPERIOR</h3>
-                    <textarea class="top-text-options" id="top-text-options" aria-label="Texto superior" maxlength="45" size="10" style="resize: none;">TOP TEXT</textarea>
+                <article class="box-superior-text-options box-text-dark">
+                    <h3 class="title-superior-text-options title-dark-text">SUPERIOR</h3>
+                    <textarea class="top-text-options options-dark" id="top-text-options" aria-label="Texto superior" maxlength="45" size="10" style="resize: none;">TOP TEXT</textarea>
                     <div class="no-superior-text-options">
-                        <input type="checkbox" id="no-superior-text" name="no-superior-text" class="input-sin-texto-sup">
+                        <input type="checkbox" id="no-superior-text" name="no-superior-text" class="input-sin-texto-sup options-dark">
                         <label for="no-superior-text" class="label-sin-texto-s">Sin texto superior</label>
                     </div>
                 </article>
 
-                <article class="box-inferior-text-options">
-                    <h3 class="title-inferior-text-options">INFERIOR</h3>
-                    <textarea class="bottom-text-options" id="bottom-text-options" aria-label="Texto inferior" maxlength="45" size="10" style="resize: none;">BOTTOM TEXT</textarea>
+                <article class="box-inferior-text-options box-text-dark">
+                    <h3 class="title-inferior-text-options title-dark-text">INFERIOR</h3>
+                    <textarea class="bottom-text-options options-dark" id="bottom-text-options" aria-label="Texto inferior" maxlength="45" size="10" style="resize: none;">BOTTOM TEXT</textarea>
                     <div class="no-bottom-text-options">
-                        <input type="checkbox" id="no-bottom-text" name="no-bottom-text" class="input-sin-texto-i">
+                        <input type="checkbox" id="no-bottom-text" name="no-bottom-text" class="input-sin-texto-i options-dark">
                         <label for="no-bottom-text" class="label-sin-texto-i">Sin texto inferior</label>
                     </div>
                 </article>
 
                
                     <div class="box-titulo-fuente">
-                    <h2 class="tittle-fuente-text-option">FUENTE</h2>
+                    <h2 class="tittle-fuente-text-option" id="title-fuente-dark">FUENTE</h2>
                     </div> 
-                <article class="box-fuente-text-options">
-                    <select class="button-impact-text-options" id="button-fuentes-text" aria-label="opciones de fuentes">
+                <article class="box-fuente-text-options box-text-dark">
+                    <select class="button-impact-text-options options-dark" id="button-fuentes-text" aria-label="opciones de fuentes">
                         <option value="Arial">Arial</option>
                         <option value="Arial Black">Arial Black</option>
                         <option value="American Typerwriter">American Typerwriter</option>
@@ -162,7 +163,7 @@
 
                     <div class="box-tamaño-centrado-text">
                          <div class="box-tamaño-text-option">
-                             <input type="number" name="tamaño-text-options" id="tamaño-fuente-text-options" min="12" value="40" aria-label="tamaño de fuente" class="input-tamaño-fuente">
+                             <input type="number" name="tamaño-text-options" id="tamaño-fuente-text-options" min="12" value="40" aria-label="tamaño de fuente" class="input-tamaño-fuente options-dark">
                          </div>
 
                          <div class="box-centrado-text-options">
@@ -180,11 +181,11 @@
                 </article>
 
 
-                <article class="box-color-fondo-text-options">
+                <article class="box-color-fondo-text-options box-text-dark">
                     <div class="buttons-color-fondo-text-options">
                         <div class="box-button-color-text-options">
-                            <h3 class="tittle-color-text-options">COLOR</h3>
-                            <div class="button-color-text-options">
+                            <h3 class="tittle-color-text-options title-dark-text">COLOR</h3>
+                            <div class="button-color-text-options options-dark">
                                 <input type="color" name="button-color-text" value="#000000" aria-label="Color de texto" class="input-color-texto" id="input-color-texto">
                                 <span class="color-text-options">#000000</span>
                             </div>
@@ -192,8 +193,8 @@
                         
 
                         <div class="box-button-fondo-text-options">
-                            <h3 class="tittle-fono-text-options">FONDO</h3>
-                            <div class="button-fondo-text-options">
+                            <h3 class="tittle-fono-text-options title-dark-text">FONDO</h3>
+                            <div class="button-fondo-text-options options-dark">
                                 <input type="color" name="button-fondo-text" value="#ffffff" aria-label="Color de fondo de texto" class="input-color-fondo-texto" id="input-color-fondo-texto">
                                 <span class="fondo-text-options">#ffffff</span>
                             </div>
@@ -201,14 +202,14 @@
                     </div>
 
                     <div class="box-transparent-text-options">
-                        <input type="checkbox" name="transparent" id="transparent-text-option" class="input-transparent-text">
+                        <input type="checkbox" name="transparent" id="transparent-text-option" class="input-transparent-text options-dark">
                         <label for="transparent" class="label-transparent-text">Fondo Transparente</label>
                     </div>
                 </article>
 
 
-                <article class="box-contorno-text-options">
-                    <h3 class="tittle-contorno-text-options">CONTORNO</h3>
+                <article class="box-contorno-text-options box-text-dark">
+                    <h3 class="tittle-contorno-text-options title-dark-text">CONTORNO</h3>
                     <div class="buttons-ninguno-claro-oscuro-text-options">
                         <button class="button-ninguno-text-options" id="button-ninguno-text-options">Ninguno</button>
                         <button class="button-claro-text-options" id="button-claro-text-options">Claro</button>
@@ -216,14 +217,14 @@
                     </div>
                 </article>
 
-                <article class="box-espaciado-text-options">
-                    <h3 class="tittle-espaciado-text-options">ESPACIADO</h3>
-                    <input type="number" class="input-espaciado-number-text-options" id="espaciado-text-options" min="10" max="50" value="35" aria-label="Espaciado" >
+                <article class="box-espaciado-text-options box-text-dark">
+                    <h3 class="tittle-espaciado-text-options title-dark-text">ESPACIADO</h3>
+                    <input type="number" class="input-espaciado-number-text-options options-dark" id="espaciado-text-options" min="10" max="50" value="35" aria-label="Espaciado" >
                 </article>
 
-                <article class="box-interlineado-text-options">
-                    <h3 class="tittle-interlineado-text-options">INTERLINEADO</h3>
-                    <select class="interlineado-text-options" id="interlineado-text-options" aria-label="Interlineado">
+                <article class="box-interlineado-text-options box-text-dark">
+                    <h3 class="tittle-interlineado-text-options title-dark-text">INTERLINEADO</h3>
+                    <select class="interlineado-text-options options-dark" id="interlineado-text-options" aria-label="Interlineado">
                         <option value="0.8">0.8</option>
                         <option value="1">1</option>
                         <option value="1.2" selected>1.2</option>
