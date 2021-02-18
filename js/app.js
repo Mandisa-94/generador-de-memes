@@ -6,6 +6,8 @@ const backgroundPage = document.getElementById ('background-page');
 const boxFiltros = document.querySelectorAll('.box-filtros');
 const tituloSecundario = document.querySelectorAll('h2');
 const tituloTerciario = document.querySelectorAll('h3');
+const closed = document.getElementById ('closed');
+const labelSideBar = document.getElementById ('label-side-bar');
 
 
 
@@ -17,7 +19,7 @@ const oscuroBotonera = document.getElementById ('oscuro-botonera');
 const header = document.getElementById('header');
 const containerImgText = document.getElementById('container-img-text');
 const containerBotonera = document.getElementById ('container-botonera');
-const botonera = document.querySelectorAll('.botonera')
+const botonera = document.querySelectorAll('.botonera');
 
 
  
@@ -38,10 +40,10 @@ const hueFiltrosImg = document.getElementById ('hue-filtros-img');
 const saturadoFiltrosImg = document.getElementById ('saturado-filtros-img');
 const negativoFiltrosImg = document.getElementById ('negativo-filtros-img');
 const buttonRestablecerFiltrosImg = document.getElementById ('button-restablecer-filtros-img');
-const labelFiltrosImg = document.querySelectorAll ('.label-filtros-img')
-const inputFiltrosImg = document.querySelectorAll ('.input-filtros-img')
-const buttonTonalidadesColorImgOptions = document.getElementById('button-tonalidades-color-img-options')
-const titleUrlFondo = document.querySelectorAll('.title-url-fondo')
+const labelFiltrosImg = document.querySelectorAll ('.label-filtros-img');
+const inputFiltrosImg = document.querySelectorAll ('.input-filtros-img');
+const buttonTonalidadesColorImgOptions = document.getElementById('button-tonalidades-color-img-options');
+const titleUrlFondo = document.querySelectorAll('.title-url-fondo');
 
 
 
@@ -89,14 +91,17 @@ const boxImgMeme = document.getElementById ('box-img-meme');
 imagenBotonera.addEventListener('click', (e)=>{
     boxImgOptions.style.display = 'flex';
     boxTextOptions.style.display = 'none';
+    responsiveMenu()
 }
 );
 
 textoBotonera.addEventListener('click', (e)=>{
         boxImgOptions.style.display = 'none';
         boxTextOptions.style.display = 'flex';
+        responsiveMenu()
     }
     );
+
 
                                                   //Funcionalidad de opciones de Texto//
 
@@ -153,33 +158,6 @@ const ocultarTextos = () =>{
     else{ocultarTextos()}
 });
 
-
-  
-// const ocultarTextos = () => {
-// if(noSuperiorText.checked || noBottomText.checked){
-//     boxImgMeme.style.height = '50vh'
-// } else if (!noSuperiorText.checked ){
-//     boxImgMeme.style.height = '40vh'
-//     boxTextoMemeTop.style.display = 'flex';
-//     boxTextoMemeTop.style.justifyContent = 'center'
-
-// } else if (!noBottomText.checked){
-//     boxImgMeme.style.height = '40vh'
-//     boxTextoMemeBottom.style.display = 'flex';
-//     boxTextoMemeBottom.style.justifyContent = 'center'
-// }
-// else if (noSuperiorText.checked && noBottomText.checked){
-//     boxImgMeme.classList.toggle ('sin-textos')
-// }}
-// noSuperiorText.addEventListener('click', (e)=>{
-//     boxTextoMemeTop.style.display = 'none';
-//     ocultarTextos()
-// });
-
-// noBottomText.addEventListener('click', (e)=>{    
-//     boxTextoMemeBottom.style.display = 'none';
-//     ocultarTextos()
-// });
 
 //3- Seleccionar tipografia//
 buttonFuentesText.addEventListener('change',(e) =>{
@@ -363,6 +341,8 @@ buttonRestablecerFiltrosImg.addEventListener('click', ()=>{
 //DARK-MODE//
 oscuroBotonera.addEventListener('click', (e)=>{
     if (oscuroBotonera.checked === true){
+        etiquetaBody.style.backgroundColor = '#272323'
+        closed.style.color = 'cyan'
         backgroundPage.setAttribute ('src', './Img/backgroundDark-.JPG');
 
         header.setAttribute('class', 'header-dark');
@@ -431,6 +411,8 @@ oscuroBotonera.addEventListener('click', (e)=>{
          
 
     }else if (!oscuroBotonera.checked){
+        etiquetaBody.style.backgroundColor = 'transparent'
+        closed.style.color = 'rgb(33, 33, 73)'
         backgroundPage.setAttribute ('src', './Img/background.jpg');
         header.setAttribute ('class', 'header');
         containerImgText.setAttribute ('class', 'container-img-text');
@@ -505,3 +487,50 @@ oscuroBotonera.addEventListener('click', (e)=>{
 
     }
 });
+
+
+
+//SIDE-BAR//
+
+const responsiveMenu = ()=>{
+    if(window.screen.width < 900){
+        header.style.display = 'none'
+        backgroundPage.style.display = 'none'
+        containerImgText.style.display = 'flex'
+        containerImgText.classList.add ('container-img-text-phone')
+
+
+    }else{
+        header.style.display = 'flex'
+        backgroundPage.style.display = 'flex'
+        containerImgText.classList.remove ('container-img-text-phone')
+        containerImgText.classList.add ('container-img-text')    
+}
+}
+
+
+
+imagenBotonera.addEventListener('click', ()=>{
+
+    responsiveMenu()
+})
+
+textoBotonera.addEventListener('click', ()=>{
+
+    responsiveMenu()
+})
+
+
+closed.addEventListener('click', ()=>{
+  
+    containerImgText.style.display = 'none'
+    header.style.display = 'flex'
+    backgroundPage.style.display = 'flex'
+    }
+)
+
+
+
+
+
+

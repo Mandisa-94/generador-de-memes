@@ -258,6 +258,13 @@ body{
                                                                /*OPCIONES DE IMAGEN*/
 
 
+.input-side-bar{
+     display: none; 
+}
+.closed{
+     display: none; 
+}
+
 .container-img-text{
     position: fixed;
     right: 0;
@@ -783,6 +790,9 @@ h3{
     /* opacity: 0.9; */
     margin-top: 1%;
 }
+
+                                   /*FIN MODO OSCURO*/
+
 
 
 
