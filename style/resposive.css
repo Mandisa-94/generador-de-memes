@@ -12,6 +12,7 @@
     }
     .container-botonera{
         width: 100%;
+        padding: 2%;
         margin-top: 3%;
     }
     .botonera{
@@ -26,6 +27,7 @@
     }
     .box-meme{
         width: 90%;
+        border: none;
     }
     .box-texto-meme{
         font-size: 2rem;
@@ -50,7 +52,8 @@
         font-size: 2rem;
     }
     .container-botonera{
-        width: 90%;
+        width: 100%;
+        padding: 1%;
         margin-top: 3%;
     }
     .botonera{
@@ -59,13 +62,14 @@
 
     .main-container-memes{
         width: 100%;
-        margin-top: 15%;
+        margin-top: 10%;
         display: flex;
         justify-content: center;
         align-items: center;
     }
     .box-meme{
         width: 90%;
+        border: none;
     }
     .box-texto-meme{
         font-size: 2rem;
@@ -91,7 +95,8 @@
         font-size: 3rem;
     }
     .container-botonera{
-        width: 90%;
+        width: 100%;
+        padding: 2%;
     }
     .botonera{
         font-size: 1.7rem;
@@ -107,6 +112,7 @@
 
     .box-meme{
         width: 90%;
+        border: none;
     }
  
     .box-texto-meme{
@@ -140,10 +146,11 @@
         opacity: unset;
     }   
     
-    .box-img-options{
+    .box-img-options, .box-text-options{
         height: auto;
         opacity: unset;
         transition: all 5s;
+        background-color: white;
     }
 
     .button-fondo-paleta-colores-img-options{
@@ -186,6 +193,7 @@
 
     .container-botonera-dark{
         width: 100%;
+        padding: 2%;
     }
 
     .closed-dark{
