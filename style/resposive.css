@@ -152,6 +152,9 @@
         transition: all 5s;
         background-color: white;
     }
+    .box-img-options-dark, .box-text-options-dark{
+        background-color: rgb(39, 35, 35);
+    }
 
     .button-fondo-paleta-colores-img-options{
         height: 6vh;

@@ -344,11 +344,8 @@ oscuroBotonera.addEventListener('click', (e)=>{
         etiquetaBody.style.backgroundColor = '#272323'
         closed.style.color = 'cyan'
         backgroundPage.setAttribute ('src', './Img/backgroundDark-.JPG');
-
         header.setAttribute('class', 'header-dark');
-
         containerImgText.setAttribute ('class', 'container-img-text-dark')
-
         urlImgOptions.style.backgroundColor = 'cyan'
         urlImgOptions.style.color = 'rgb(33, 33, 73)'
         colorFondoImg.style.backgroundColor = 'cyan'
@@ -356,6 +353,7 @@ oscuroBotonera.addEventListener('click', (e)=>{
         colorOptions.style.backgroundColor = 'cyan'
         colorOptions.style.color = 'rgb(33, 33, 73)'
         buttonTonalidadesColorImgOptions.style.backgroundColor= 'cyan'
+        containBoxMeme.style.backgroundColor= 'black'
 
         for(let i = 0; i<tituloTerciario.length; i++ ){
             tituloTerciario[i].style.color = 'white'
@@ -384,10 +382,6 @@ oscuroBotonera.addEventListener('click', (e)=>{
             boxTextoMeme[i].style.backgroundColor = 'black' 
         }
 
-        containBoxMeme.style.backgroundColor= 'black'
-
-
-
         //Estilos Dark de TEXTO//
         for(let i = 0; i<boxTextDark.length; i++){
             boxTextDark[i].style.backgroundColor = 'cyan' 
@@ -406,9 +400,8 @@ oscuroBotonera.addEventListener('click', (e)=>{
         labelSinTextoS.style.color = 'rgb(33, 33, 73)'
         labelSinTextoI.style.color = 'rgb(33, 33, 73)'
         labelTransparentText.style.color = 'rgb(33, 33, 73)'
-
-        
-         
+       
+   
 
     }else if (!oscuroBotonera.checked){
         etiquetaBody.style.backgroundColor = 'transparent'
@@ -416,7 +409,6 @@ oscuroBotonera.addEventListener('click', (e)=>{
         backgroundPage.setAttribute ('src', './Img/background.jpg');
         header.setAttribute ('class', 'header');
         containerImgText.setAttribute ('class', 'container-img-text');
-
         urlImgOptions.style.backgroundColor = 'rgb(33, 33, 73)'
         urlImgOptions.style.color = 'white'
         colorFondoImg.style.backgroundColor = 'rgb(33, 33, 73)'
@@ -424,6 +416,8 @@ oscuroBotonera.addEventListener('click', (e)=>{
         colorOptions.style.backgroundColor = 'rgb(33, 33, 73)'
         colorOptions.style.color = 'white'
         buttonTonalidadesColorImgOptions.style.backgroundColor= 'rgb(33, 33, 73)'
+        containBoxMeme.style.backgroundColor= 'white'
+
         for(let i = 0; i<tituloTerciario.length; i++ ){
             tituloTerciario[i].style.color = 'white'
         }
@@ -456,10 +450,6 @@ oscuroBotonera.addEventListener('click', (e)=>{
             boxTextoMeme[i].style.backgroundColor = 'rgb(33, 33, 73)' 
         }
 
-        containBoxMeme.style.backgroundColor= 'white'
-
-        
-      
 
         //Estilos Dark de TEXTO//
 
@@ -482,9 +472,6 @@ oscuroBotonera.addEventListener('click', (e)=>{
         labelSinTextoS.style.color = 'white'
         labelSinTextoI.style.color = 'white'
         labelTransparentText.style.color = 'white'
-
-      
-
     }
 });
 
@@ -498,14 +485,22 @@ const responsiveMenu = ()=>{
         backgroundPage.style.display = 'none'
         containerImgText.style.display = 'flex'
         containerImgText.classList.add ('container-img-text-phone')
+        
 
 
     }else{
         header.style.display = 'flex'
         backgroundPage.style.display = 'flex'
         containerImgText.classList.remove ('container-img-text-phone')
-        containerImgText.classList.add ('container-img-text')    
+        containerImgText.classList.add ('container-img-text')  
+      
 }
+}
+const colorMenuImgText = () =>{
+    if(window.screen.width < 900){
+        boxImgOptions.classList.toggle ('box-img-options-dark') 
+        boxTextOptions.classList.toggle ('box-text-options-dark')
+    }
 }
 
 
@@ -519,6 +514,11 @@ textoBotonera.addEventListener('click', ()=>{
 
     responsiveMenu()
 })
+
+oscuroBotonera.addEventListener('click', ()=>{
+    colorMenuImgText()
+})
+
 
 
 closed.addEventListener('click', ()=>{
