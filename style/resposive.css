@@ -130,6 +130,19 @@
 }
 
 @media (min-width: 900px) and (max-width: 1400px){
+.title-memes{
+    font-size: 2rem;
+}    
+.botonera, h3, .label-sin-texto-s, .label-sin-texto-i, .label-transparent-text{
+
+    font-size: 1rem;
+}
+h2{
+    font-size: 1.5rem;
+}
+.box-texto-meme {
+    font-size: 2rem;
+}
 .color-fondo-buttons-img-options{
     flex-direction: column;
 }
@@ -138,12 +151,17 @@
 }
 .black-color-img-fondo{
     left: 40px;
+    font-size: 1rem;
 }
 .color-fondo-img {
     margin-top: 2%;
+    font-size: 1rem;
 }
 .box-filtros{
     margin: 2.5% 0;
+}
+.label-filtros-img{
+    font-size: 1rem;
 }
 .color-text-options, .fondo-text-options{
     font-size: 0.7rem;
