@@ -124,11 +124,44 @@
         font-size: 1.7rem;
     }
 
-    /* .container-img-text{
+     .container-img-text{
         display: none;
-    } */
+    } 
 }
 
+@media (min-width: 900px) and (max-width: 1400px){
+.color-fondo-buttons-img-options{
+    flex-direction: column;
+}
+.button-fondo-paleta-colores-img-options, .button-tonalidades-color-img-options{
+    width: 100%;
+}
+.black-color-img-fondo{
+    left: 40px;
+}
+.color-fondo-img {
+    margin-top: 2%;
+}
+.box-filtros{
+    margin: 2.5% 0;
+}
+.color-text-options, .fondo-text-options{
+    font-size: 0.7rem;
+}
+.button-ninguno-text-options, .button-claro-text-options, .button-oscuro-text-options{
+    font-size: 0.7rem;
+}
+.container-img-text{
+    width: 20%;
+}
+.header{
+    width: 80%;
+}
+.main-container-memes{
+    width: 80%;
+}
+
+}
 
 
 
