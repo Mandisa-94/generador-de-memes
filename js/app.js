@@ -71,16 +71,18 @@ const boxTextDark = document.querySelectorAll ('.box-text-dark');
 const titleDarkText = document.querySelectorAll ('.title-dark-text');
 const titleFuenteDark = document.getElementById ('title-fuente-dark');
 const optionsDark = document.querySelectorAll ('.options-dark');
-const labelSinTextoS = document.getElementsByClassName ('label-sin-texto-s')[0]
-const labelSinTextoI = document.getElementsByClassName ('label-sin-texto-i')[0]
-const labelTransparentText = document.getElementsByClassName ('label-transparent-text')[0]
+const labelSinTextoS = document.getElementsByClassName ('label-sin-texto-s')[0];
+const labelSinTextoI = document.getElementsByClassName ('label-sin-texto-i')[0];
+const labelTransparentText = document.getElementsByClassName ('label-transparent-text')[0];
+const colorTextOptions = document.getElementById ('color-text-options');
+const fondoTextOptions = document.getElementById ('fondo-text-options');
 
 //ID container meme//
 const boxTextoMemeTop = document.getElementById ('box-texto-meme-top');
 const containBoxMeme = document.getElementById ('contain-box-meme');
 var boxTextoMemeBottom = document.getElementById ('box-texto-meme-bottom');
 const boxImgMeme = document.getElementById ('box-img-meme');
-const topText = document.getElementById ('top-text')
+const topText = document.getElementById ('top-text');
 
 
 
@@ -187,12 +189,14 @@ buttonRightTextOptions.addEventListener ('click', (e)=>{
 inputColorTexto.addEventListener ('input', (e)=>{
     boxTextoMemeTop.style.color = `${inputColorTexto.value}`;
     boxTextoMemeBottom.style.color = `${inputColorTexto.value}`;
+    colorTextOptions.innerText = inputColorTexto.value
 });
 
 //7- Elegir color de fondo de texto + Fondo tranparente//
 inputColorFondoTexto.addEventListener ('input', (e)=>{
     boxTextoMemeTop.style.backgroundColor = `${inputColorFondoTexto.value}`;
     boxTextoMemeBottom.style.backgroundColor = `${inputColorFondoTexto.value}`;
+    fondoTextOptions.innerText = inputColorFondoTexto.value
 });
 
 transparentTextOption.addEventListener ('change', (e) => {
@@ -260,6 +264,7 @@ interlineadoTextOptions.addEventListener('keyup', ()=>{
 urlImgOptions.addEventListener ('keyup', ()=>{
     const urlImg = urlImgOptions.value;
      boxImgMeme.style.backgroundImage = `url('${urlImg}')`;   
+    
 });
 
 //2- Cambiar color de fondo de imagen + Efectos de blend//
@@ -267,7 +272,9 @@ urlImgOptions.addEventListener ('keyup', ()=>{
 colorFondoImg.addEventListener ('input', (e)=>{
     const colorFondo = e.target.value;
     boxImgMeme.style.backgroundColor = colorFondo;
+    blackColorImgFondo.innerText = colorFondo
 });
+
 colorOptions.addEventListener('change', ()=>{
     boxImgMeme.style.backgroundBlendMode = colorOptions.value;
 });

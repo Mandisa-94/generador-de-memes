@@ -175,41 +175,6 @@ body{
      display: flex;
      background-position: center;
      background-repeat: no-repeat; 
-     background-position: center;
-     background-size: cover; 
-    
-}
-
-.box-texto-meme-none{
-    display: none;
-}
-
-.sin-textos{
-    height: 100%;
-    width: 100%;
-    display: flex;
-     background-position: center;
-     background-repeat: no-repeat; 
-     background-position: center;
-     background-size: cover; 
-}
-
-.sin-sup {
-    height: 50vh;
-    width: 100%;
-    display: flex;
-     background-position: center;
-     background-repeat: no-repeat; 
-     background-position: center;
-     background-size: cover; 
-}
-.sin-inf{
-    height: 50vh;
-    width: 100%;
-    display: flex;
-     background-position: center;
-     background-repeat: no-repeat; 
-     background-position: center;
      background-size: cover; 
 }
 
@@ -503,6 +468,7 @@ h3{
     font-size: 1.2rem;
     font-family: var(--Tituloh2h3);
     transition: all 0.4s; 
+    appearance: none;
 }
 
 .box-fuente-text-options, .box-color-fondo-text-options, .box-contorno-text-options{
@@ -560,6 +526,7 @@ h3{
     font-size: 1.2rem;
     border-style: none;
     transition: all 0.4s; 
+    appearance: none;
 }
 
 .box-centrado-text-options{
@@ -708,6 +675,8 @@ h3{
     padding: 3%;
     font-size: 1.2rem;
     font-family: var(--Tituloh2h3);
+    appearance: none;
+    border-style: none;
 }
 
 .title-superior-text-options, .title-inferior-text-options, .tittle-color-text-options, .tittle-fono-text-options, .tittle-contorno-text-options, .tittle-espaciado-text-options, .tittle-interlineado-text-options{
