@@ -80,6 +80,7 @@ const boxTextoMemeTop = document.getElementById ('box-texto-meme-top');
 const containBoxMeme = document.getElementById ('contain-box-meme');
 var boxTextoMemeBottom = document.getElementById ('box-texto-meme-bottom');
 const boxImgMeme = document.getElementById ('box-img-meme');
+const topText = document.getElementById ('top-text')
 
 
 
@@ -115,48 +116,38 @@ textoBotonera.addEventListener('click', (e)=>{
 });
 
 //2- Desaparecer los texto en meme - top y bottom//
-//hacer una funcion dentro de una funcion//
-const ocultarTextos = () =>{
+
+const ocultarTextos = ()=>{
     if (noSuperiorText.checked && noBottomText.checked){
-        boxTextoMemeBottom.classList.add ('box-texto-meme-none')
-        boxTextoMemeTop.classList.add ('box-texto-meme-none')
-        boxImgMeme.classList.add('sin-textos')
-    }
-};
+        boxTextoMemeTop.style.display = 'none'
+        boxTextoMemeBottom.style.display = 'none'
+        boxImgMeme.style.height = '100%'   
+}}
 
-     noSuperiorText.addEventListener('click', (e)=>{
+noSuperiorText.addEventListener('click', ()=>{
     if(noSuperiorText.checked){
-        boxImgMeme.classList.add ('sin-sup')
-        boxTextoMemeTop.classList.add ('box-texto-meme-none')
-
-        // boxTextoMemeTop.style.display = 'none';
-        //  boxImgMeme.style.height = '50vh'
-    }else if (!noSuperiorText.checked)
-    {boxImgMeme.classList.remove ('sin-sup')
-     boxTextoMemeTop.classList.remove ('box-texto-meme-none')
-}
-            //  {boxTextoMemeTop.style.display = 'flex';
-            //  boxTextoMemeTop.style.justifyContent = 'center'
-            //  boxImgMeme.style.height = '40vh'}
-     else{ocultarTextos()}
-});
-
- noBottomText.addEventListener('click', (e)=>{
-    if(noBottomText.checked){
-        boxImgMeme.classList.add ('sin-inf')
-        boxTextoMemeBottom.classList.add ('box-texto-meme-none')
-        // boxTextoMemeBottom.style.display = 'none';
-        // boxImgMeme.style.height = '50vh'
-    }else if (!noBottomText.checked)
-    {
-        boxImgMeme.classList.remove('sin-inf')
-        boxTextoMemeBottom.classList.remove ('box-texto-meme-none')
+    boxTextoMemeTop.style.display = 'none'
+    boxImgMeme.style.height = '100%'}
+    else if (!noSuperiorText.checked){
+        boxTextoMemeTop.style.display = 'flex'
+        boxTextoMemeTop.style.justifyContent = 'center'
+        boxImgMeme.style.height = '100%'
     }
-            //  {boxTextoMemeBottom.style.display = 'flex';
-            //  boxTextoMemeBottom.style.justifyContent = 'center'
-            //  boxImgMeme.style.height = '40vh'}
-    else{ocultarTextos()}
-});
+    else {ocultarTextos()}
+})
+
+noBottomText.addEventListener('click', ()=>{
+    if(noBottomText.checked){
+        boxTextoMemeBottom.style.display = 'none'
+        boxImgMeme.style.height = '100%'
+    }
+    else if (!noBottomText.checked){
+        boxTextoMemeBottom.style.display = 'flex'
+        boxTextoMemeBottom.style.justifyContent = 'center'
+        boxImgMeme.style.height = '100%'
+    }
+    else {ocultarTextos()}
+})
 
 
 //3- Seleccionar tipografia//
@@ -208,7 +199,16 @@ transparentTextOption.addEventListener ('change', (e) => {
     if(transparentTextOption.checked){
         boxTextoMemeTop.style.backgroundColor = 'transparent'
         boxTextoMemeBottom.style.backgroundColor = 'transparent'
+        boxTextoMemeTop.style.position = 'absolute'
+        boxTextoMemeTop.style.top = '0'
+        boxTextoMemeBottom.style.position = 'absolute'
+        boxTextoMemeBottom.style.marginTop = '27%'
+        boxImgMeme.style.height = '100%'
+
     }else if (!transparentTextOption.checked) {
+        boxTextoMemeTop.style.position = 'static'
+        boxTextoMemeBottom.style.position = 'static'
+        boxTextoMemeBottom.style.marginTop = '0'
         boxTextoMemeTop.style.backgroundColor = `${inputColorFondoTexto.value}`;
         boxTextoMemeBottom.style.backgroundColor = `${inputColorFondoTexto.value}`;
     }

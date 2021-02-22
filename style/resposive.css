@@ -158,7 +158,8 @@ h2{
     font-size: 1rem;
 }
 .box-filtros{
-    margin: 2.5% 0;
+    padding: 0;
+    margin: 2% 0;
 }
 .label-filtros-img{
     font-size: 1rem;
@@ -168,6 +169,12 @@ h2{
 }
 .button-ninguno-text-options, .button-claro-text-options, .button-oscuro-text-options{
     font-size: 0.7rem;
+}
+.top-text-options, .bottom-text-options, .button-impact-text-options{
+    padding: 0;
+}
+.input-espaciado-number-text-options, .interlineado-text-options{
+    padding: 0;
 }
 .container-img-text{
     width: 20%;
