@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto&family=Roboto+Condensed&display=swap');
+
 *{
     margin: 0;
     padding: 0;
@@ -10,14 +13,10 @@
     src: url(/MODULO-2/Generador\ de\ \ memes/bigNoodleTitling.ttf);
    
 }
-@font-face {
-     font-family: bigNoodleTitling,Oblique;
-     src: url(/MODULO-2/Generador\ de\ \ memes/bigNoodleTitlingOblique.ttf);
 
-}
 :root {
-    --Tituloh1: bigNoodleTitling;
-    --Tituloh2h3: bigNoodleTitling,Oblique;
+    --Tituloh1: bigNoodleTitling, 'Roboto Condensed', sans-serif;;
+    --Tituloh2h3:'Bebas Neue', cursive;
 }
 body{
     height: 100vh;
@@ -242,7 +241,7 @@ body{
 }
 
 h2{
-    font-size: 2rem;
+    font-size: 1.5em;
     font-family: var(--Tituloh2h3);
     color: black;
     transition: all 0.4s;
@@ -250,7 +249,7 @@ h2{
 
 
 h3{
-    font-size: 1.5rem;
+    font-size: 1.3em;
     font-family: var(--Tituloh2h3);
     display: flex;
     width: 100%;
@@ -267,7 +266,7 @@ h3{
     opacity: 0.9;  
     color: white;
     font-family: var(--Tituloh2h3);
-    font-size: 1rem;
+    font-size: 1em;
     outline: none;
     transition: all 0.4s;
 }
@@ -326,6 +325,8 @@ h3{
     margin-right: 2%;
     width: 50%;
     transition: all 0.4s; 
+    border-style: none;
+    appearance: none;
 }
 
 .button-fondo-paleta-colores-img-options{
@@ -353,7 +354,7 @@ h3{
     left: 35px;
     top: 50%;
     transform: translateY(-50%); 
-    font-size: 1.3rem;
+    font-size: 1.5em;
     margin-left: 2%;
     font-family: var(--Tituloh2h3);
     color: white;
@@ -367,7 +368,7 @@ h3{
     opacity: 0.9;
     color: white;
     font-family: var(--Tituloh2h3);
-    font-size: 1.5rem;
+    font-size: 1.5em;
     transition: all 0.4s;
 }
 
@@ -397,7 +398,7 @@ h3{
 }
 
 .label-filtros-img{
-    font-size: 1.5rem;
+    font-size: 1.2em;
     font-family: var(--Tituloh2h3);
     width: 100%;
     justify-content: flex-start;
@@ -432,7 +433,7 @@ h3{
     height: auto;
     width: 60%;
     display: flex;
-    padding: 4%;
+    padding: 2%;
     background-color: rgb(71, 71, 71);
     color: white;
     letter-spacing: 0.15em;
@@ -440,7 +441,7 @@ h3{
     justify-content: center;
     text-transform: uppercase;
     border-style: none;
-    font-size: 1rem;
+    font-size: 1.1em;
     font-family: var(--Tituloh2h3);
     
 }
@@ -468,7 +469,9 @@ h3{
     font-size: 1.2rem;
     font-family: var(--Tituloh2h3);
     transition: all 0.4s; 
-    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    overflow: unset;
 }
 
 .box-fuente-text-options, .box-color-fondo-text-options, .box-contorno-text-options{

@@ -361,6 +361,9 @@ oscuroBotonera.addEventListener('click', (e)=>{
         colorOptions.style.color = 'rgb(33, 33, 73)'
         buttonTonalidadesColorImgOptions.style.backgroundColor= 'cyan'
         containBoxMeme.style.backgroundColor= 'black'
+        colorTextOptions.style.color = 'white'
+        fondoTextOptions.style.color = 'white'
+
 
         for(let i = 0; i<tituloTerciario.length; i++ ){
             tituloTerciario[i].style.color = 'white'
@@ -424,6 +427,8 @@ oscuroBotonera.addEventListener('click', (e)=>{
         colorOptions.style.color = 'white'
         buttonTonalidadesColorImgOptions.style.backgroundColor= 'rgb(33, 33, 73)'
         containBoxMeme.style.backgroundColor= 'white'
+        colorTextOptions.style.color = 'black'
+        fondoTextOptions.style.color = 'black'
 
         for(let i = 0; i<tituloTerciario.length; i++ ){
             tituloTerciario[i].style.color = 'white'
