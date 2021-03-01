@@ -42,9 +42,7 @@
      .container-img-text{
         display: none;
     } 
-    /* .color-text-options, .fondo-text-options{
-        color: black;
-    } */
+
     .color-fondo-img{
         margin-top: 3%;
     }
@@ -91,9 +89,6 @@
         display: none;
     }
 
-    /* .color-text-options, .fondo-text-options{
-        color: black;
-    } */
 
     .color-fondo-img{
         margin-top: 4%;
@@ -142,10 +137,6 @@
      .container-img-text{
         display: none;
     } 
-
-    /* .color-text-options, .fondo-text-options{
-        color: black;
-    } */
 
     .color-fondo-img{
         margin-top: 4.5%;
