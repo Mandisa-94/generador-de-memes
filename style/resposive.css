@@ -145,17 +145,17 @@
 
 @media (min-width: 900px) and (max-width: 1400px){
 .title-memes{
-    font-size: 2rem;
+    font-size: 2em;
 }    
 .botonera, h3, .label-sin-texto-s, .label-sin-texto-i, .label-transparent-text{
 
-    font-size: 1rem;
+    font-size: 1em;
 }
 h2{
-    font-size: 1.5rem;
+    font-size: 1.5em;
 }
 .box-texto-meme {
-    font-size: 2rem;
+    font-size: 2em;
 }
 .color-fondo-buttons-img-options{
     flex-direction: column;
@@ -167,24 +167,24 @@ h2{
 }
 .black-color-img-fondo{
     left: 40px;
-    font-size: 1rem;
+    font-size: 1em;
 }
 .color-fondo-img {
     margin-top: 2%;
-    font-size: 1rem;
+    font-size: 1em;
 }
 .box-filtros, .box-filtros-dark{
     padding: 0;
     margin: 2% 0;
 }
 .label-filtros-img{
-    font-size: 1rem;
+    font-size: 1em;
 }
 .color-text-options, .fondo-text-options{
-    font-size: 0.7rem;
+    font-size: 0.7em;
 }
 .button-ninguno-text-options, .button-claro-text-options, .button-oscuro-text-options{
-    font-size: 0.7rem;
+    font-size: 0.7em;
 }
 .top-text-options, .bottom-text-options, .button-impact-text-options{
     padding: 0;
