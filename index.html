@@ -1,256 +1,328 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
+    <!-- META TAGS -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
+
+     <!-- -------------------Primary Meta Tags------------------- -->
+    <meta name="title" content="Generador de Memes" />
+    <meta name="description" content="Sitio web desarrollado para crear memes gratis de manera sencilla." />
+    <meta name="author" content="Gabriela Duran" />
+    <meta name="keywords" content="Gabriela Duran, meme, memes, creator, generator, HTML, css, flex-box, javascript" />
+
+    <!-- -------------------Open Graph------------------- -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://mandisa-94.github.io/generador-de-memes/" />
+    <meta property="og:title" content="Generador de Memes" />
+    <meta property="og:description"
+      content="Sitio web desarrollado para crear memes gratis de manera sencilla." />
+    <meta property="og:image"
+      content="https://raw.githubusercontent.com/Mandisa-94/generador-de-memes/master/Img/screencapture-memes-dark.png" />
+    <meta property="og:site_name" content="Generador de Memes" />
+
+    <!-- -------------------Twitter------------------- -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://mandisa-94.github.io/generador-de-memes/" />
+    <meta property="twitter:title" content="Generador de Memes" />
+    <meta property="twitter:description"
+      content="Sitio web desarrollado para crear memes gratis de manera sencilla." />
+    <meta property="twitter:image"
+      content="https://raw.githubusercontent.com/Mandisa-94/generador-de-memes/master/Img/screencapture-memes-dark.png" />
+    <meta name="twitter:image:alt" content="Generador de Memes main page" />
+
+    <!-- -------------------Fontawesone------------------- -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"
+    integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
+
+    <!-- -------------------Favicon------------------- -->
+    <link rel="icon" href="./Img/Competitive_Diamond_Icon.png">
+
+    <!-- -------------------Css Styles & Responsive------------------- -->
     <link rel="stylesheet" href="./style/style.css">
     <link rel="stylesheet" href="./style/resposive.css">
-    <link rel="icon" href="./Img/Competitive_Diamond_Icon.png">
     <title>Generador de Memes</title>
 </head>
-<body id="etiqueta-body">
-   <img src="./Img/background.jpg" alt="imagen background" class="background-page" id="background-page">
 
-  <header class="header" id="header">
-      <h1 class="title-memes">Generador de Memes</h1>
-      <nav class="container-botonera" id="container-botonera">
-          <button class="img-boton botonera" id="imagen-botonera">IMAGEN</button>
-          
-          <button class="text-boton botonera" id="texto-botonera">TEXTO</button>
-          
-          <label for="oscuro-botonera" class="oscuro-boton botonera">MODO OSCURO</label>
-          <input type="checkbox" id="oscuro-botonera" name="oscuro-botonera" class="check-botonera">
-      </nav>
-  </header>
+<body id="etiqueta-body">
+    <img src="./Img/background.jpg" alt="imagen background" class="background-page" id="background-page">
+
+    <header class="header" id="header">
+        <h1 class="title-memes">Generador de Memes</h1>
+        <nav class="container-botonera" id="container-botonera">
+            <button class="img-boton botonera" id="imagen-botonera">IMAGEN</button>
+
+            <button class="text-boton botonera" id="texto-botonera">TEXTO</button>
+
+            <label for="oscuro-botonera" class="oscuro-boton botonera">MODO OSCURO</label>
+            <input type="checkbox" id="oscuro-botonera" name="oscuro-botonera" class="check-botonera">
+        </nav>
+    </header>
 
     <main class="main-container-memes" id="main-container-memes">
         <section class="box-meme" id="box-meme">
-            <article class="box-texto-meme meme-top" id="box-texto-meme-top" aria-label="Meme imagen"><p id="top-text">TOP TEXT</p></article>
-            <article id="contain-box-meme" class="contain-box-meme" >
-                     <div class="box-img-meme" id="box-img-meme"></div>
+            <article class="box-texto-meme meme-top" id="box-texto-meme-top" aria-label="Meme imagen">
+                <p id="top-text">TOP TEXT</p>
             </article>
-            <article class="box-texto-meme meme-bottom" id="box-texto-meme-bottom"><p id="bottom-text">BOTTOM TEXT</p></article>
+            <article id="contain-box-meme" class="contain-box-meme">
+                <div class="box-img-meme" id="box-img-meme"></div>
+            </article>
+            <article class="box-texto-meme meme-bottom" id="box-texto-meme-bottom">
+                <p id="bottom-text">BOTTOM TEXT</p>
+            </article>
         </section>
         <div class="box-boton-decarga">
-         <button type="button" class="descarga-meme" id="descarga-meme">
-                <i  class="fas fa-download icono-descarga-meme" aria-label="true"> </i>
+            <button type="button" class="descarga-meme" id="descarga-meme">
+                <i class="fas fa-download icono-descarga-meme" aria-label="true"> </i>
                 &nbsp Descargar meme
             </button>
         </div>
 
-       <input type="checkbox" id="input-side-bar" class="input-side-bar">
-             <label for="input-side-bar" class="label-side-bar" id="label-side-bar">
-                         <aside class="container-img-text  " id="container-img-text">
-                         <i class="fas fa-times closed" id="closed" ></i>
-                 </label>
+        <input type="checkbox" id="input-side-bar" class="input-side-bar">
+        <label for="input-side-bar" class="label-side-bar" id="label-side-bar">
+            <aside class="container-img-text  " id="container-img-text">
+                <i class="fas fa-times closed" id="closed"></i>
+        </label>
 
-                                                                <!-- *** INICIO SECCION DE IMAGEN *** -->
-             <section class="box-img-options" id="box-img-options">
-                     <h2>IMAGEN</h2>
+        <!-- *** INICIO SECCION DE IMAGEN *** -->
+        <section class="box-img-options" id="box-img-options">
+            <h2>IMAGEN</h2>
 
-                     <article class="box-url-img-options">
-                         <h3 class="title-url-img-options title-url-fondo">URL</h3>
-                         <input type="url" name="url" id="url-img-options" class="url-img-options" aria-label="Url de imagen">
-                     </article>
+            <article class="box-url-img-options">
+                <h3 class="title-url-img-options title-url-fondo">URL</h3>
+                <input type="url" name="url" id="url-img-options" class="url-img-options" aria-label="Url de imagen">
+            </article>
 
-                     <article class="box-fondo-tonalidades-img-options">
-                         <h3 class="title-fondo-img-options title-url-fondo">FONDO</h3>
-                         <div class="color-fondo-buttons-img-options">
-                             <div class="button-fondo-paleta-colores-img-options" id="color-fondo-img">
-                                  <input type="color" name="color-fondo-img" id="color-fondo-img" class="color-fondo-img" value="#ffffff" aria-label="color de fondo de la imagen">
-                                  <span class="black-color-img-fondo" id="black-color-img-fondo" aria-hidden="true">#FFFFFF</span>
-                             </div>
-
-                             <div class="button-tonalidades-color-img-options" id="button-tonalidades-color-img-options">
-                                 <select name="color-options" id="color-options" class="color-img-options" aria-label="Tonalidades de fondo de imagen">
-                                      <option value="unset" selected>Ninguno</option>
-                                      <option value="lighten">Aclarar</option>
-                                      <option value="darken">Oscurecer</option>
-                                      <option value="difference">diferencia</option>
-                                      <option value="luminosity">Luminosidad</option>
-                                      <option value="multiply">Multiplicar</option>
-                                 </select>
-                                </div>  
-                            </div>
-                        </article> 
-                 
-                     
-
-                      <article class="box-filtros-img-options">
-                         <h2>FILTROS</h2>
-                            
-                             <div class="brillo-img-options box-filtros" id="box-filtros">
-                                 <label for="brillo" class="label-filtros-img">BRILLO</label>
-                                 <input type="range" name="brillo" id="brillo-filtros-img" class="input-filtros-img" min="0" max="1" value="1" step="0.1">
-                             </div>
-
-                             <div class="opacidad-img-options box-filtros" id="box-filtros">
-                                 <label for="opacidad" class="label-filtros-img">OPACIDAD</label>
-                                <input type="range" name="opacidad" id="opacidad-filtros-img" class="input-filtros-img" min="0" max="1" value="1" step="0.1">
-                            </div>
-
-                            <div class="contraste-img-options box-filtros" id="box-filtros">
-                                <label for="contraste" class="label-filtros-img">CONTRASTE</label>
-                                <input type="range" name="contraste" id="contraste-filtros-img" class="input-filtros-img" min="0" max="1" value="100" step="0.1">
-                            </div>
-
-                            <div class="desenfoque-img-options box-filtros" id="box-filtros">
-                                <label for="desenfoque" class="label-filtros-img">DESENFOQUE</label>
-                                <input type="range" name="desenfoque" id="desenfoque-filtros-img" class="input-filtros-img" min="0" max="10" value="0" step="0.1">
-                            </div>
-
-                            <div class="escala-img-options box-filtros" id="box-filtros">
-                                <label for="escala" class="label-filtros-img">ESCALA DE GRISES</label>
-                                <input type="range" name="escala" id="escala-filtros-img" class="input-filtros-img" min="0" max="100" value="1" step="0.1" value="0">
-                            </div>
-
-                            <div class="sepia-img-options box-filtros" id="box-filtros">
-                                <label for="sepia" class="label-filtros-img">SEPIA</label>
-                                <input type="range" name="sepia" id="sepia-filtros-img" class="input-filtros-img" min="0" max="100" value="0" step="0.1">
-                            </div>
-
-                            <div class="hue-img-options box-filtros" id="box-filtros">
-                                <label for="hue" class="label-filtros-img">HUE</label>
-                                <input type="range" name="hue" id="hue-filtros-img" class="input-filtros-img" min="0" max="359" value="0" step="0.1">
-                            </div>
-
-                            <div class="saturado-img-options box-filtros" id="box-filtros">
-                                <label for="saturado" class="label-filtros-img">SATURADO</label>
-                                <input type="range" name="saturado" id="saturado-filtros-img" class="input-filtros-img" min="100" max="1000" value="100" step="10">
-                            </div>
-
-                            <div class="negativo-img-options box-filtros" id="box-filtros">
-                                <label for="negativo" class="label-filtros-img">NEGATIVO</label>
-                                <input type="range" name="negaivo" id="negativo-filtros-img" class="input-filtros-img" min="0" max="359" value="0" step="0.1">
-                            </div>
-                        </article>
-
-                     <button class="restablecer-filtros-img-options" id="button-restablecer-filtros-img">RESTABLECER FILTROS</button>
-             </section> 
-
-                                                                 <!-- *** FIN SECCION DE IMAGEN *** -->
-
-                                                                 <!-- *** INICIO SECCION TEXTO *** -->
-             
-             <section class="box-text-options" id= "box-text-options">
-                <h2 class="title-tex-options">TEXTO</h2>
-
-                <article class="box-superior-text-options box-text-dark">
-                    <h3 class="title-superior-text-options title-dark-text">SUPERIOR</h3>
-                    <textarea class="top-text-options options-dark" id="top-text-options" aria-label="Texto superior" maxlength="45" size="10" style="resize: none;">TOP TEXT</textarea>
-                    <div class="no-superior-text-options">
-                        <input type="checkbox" id="no-superior-text" name="no-superior-text" class="input-sin-texto-sup options-dark">
-                        <label for="no-superior-text" class="label-sin-texto-s">Sin texto superior</label>
+            <article class="box-fondo-tonalidades-img-options">
+                <h3 class="title-fondo-img-options title-url-fondo">FONDO</h3>
+                <div class="color-fondo-buttons-img-options">
+                    <div class="button-fondo-paleta-colores-img-options" id="color-fondo-img">
+                        <input type="color" name="color-fondo-img" id="color-fondo-img" class="color-fondo-img"
+                            value="#ffffff" aria-label="color de fondo de la imagen">
+                        <span class="black-color-img-fondo" id="black-color-img-fondo" aria-hidden="true">#FFFFFF</span>
                     </div>
-                </article>
 
-                <article class="box-inferior-text-options box-text-dark">
-                    <h3 class="title-inferior-text-options title-dark-text">INFERIOR</h3>
-                    <textarea class="bottom-text-options options-dark" id="bottom-text-options" aria-label="Texto inferior" maxlength="45" size="10" style="resize: none;">BOTTOM TEXT</textarea>
-                    <div class="no-bottom-text-options">
-                        <input type="checkbox" id="no-bottom-text" name="no-bottom-text" class="input-sin-texto-i options-dark">
-                        <label for="no-bottom-text" class="label-sin-texto-i">Sin texto inferior</label>
+                    <div class="button-tonalidades-color-img-options" id="button-tonalidades-color-img-options">
+                        <select name="color-options" id="color-options" class="color-img-options"
+                            aria-label="Tonalidades de fondo de imagen">
+                            <option value="unset" selected>Ninguno</option>
+                            <option value="lighten">Aclarar</option>
+                            <option value="darken">Oscurecer</option>
+                            <option value="difference">diferencia</option>
+                            <option value="luminosity">Luminosidad</option>
+                            <option value="multiply">Multiplicar</option>
+                        </select>
                     </div>
-                </article>
-
-               
-                    <div class="box-titulo-fuente">
-                    <h2 class="tittle-fuente-text-option" id="title-fuente-dark">FUENTE</h2>
-                    </div> 
-                <article class="box-fuente-text-options box-text-dark">
-                    <select class="button-impact-text-options options-dark" id="button-fuentes-text" aria-label="opciones de fuentes">
-                        <option value="Arial">Arial</option>
-                        <option value="Arial Black">Arial Black</option>
-                        <option value="American Typerwriter">American Typerwriter</option>
-                        <option value="Andale Mono">Andale Mono</option>
-                        <option value="Comic Sans MS">Comic Sans MS</option>
-                        <option value="Helvetica">Helvetica</option>
-                        <option value="Impact">Impact</option>
-                        <option value="Verdana">Verdana</option>
-                        <option value="Times New Roman">Times New Roman</option>
-                    </select>
-
-                    <div class="box-tamaño-centrado-text">
-                         <div class="box-tamaño-text-option">
-                             <input type="number" name="tamaño-text-options" id="tamaño-fuente-text-options" min="12" value="40" aria-label="tamaño de fuente" class="input-tamaño-fuente options-dark">
-                         </div>
-
-                         <div class="box-centrado-text-options">
-                             <button class="button-left-text-options" id="button-left-text-options" aria-label="Alinear texto a la izquierda">
-                                 <i class="fas fa-align-left"></i>
-                             </button>
-                             <button class="button-center-text-options" id="button-center-text-options" aria-label="alinear texto al centro">
-                                 <i class="fas fa-align-center"></i>
-                             </button>
-                             <button class="button-right-text-options" id="button-right-text-options" aria-label="alinear texto a la derecha">
-                                 <i class="fas fa-align-right"></i>
-                             </button>
-                         </div>
-                     </div>
-                </article>
+                </div>
+            </article>
 
 
-                <article class="box-color-fondo-text-options box-text-dark">
-                    <div class="buttons-color-fondo-text-options">
-                        <div class="box-button-color-text-options">
-                            <h3 class="tittle-color-text-options title-dark-text">COLOR</h3>
-                            <div class="button-color-text-options options-dark">
-                                <input type="color" name="button-color-text" value="#000000" aria-label="Color de texto" class="input-color-texto" id="input-color-texto">
-                                <span class="color-text-options" id="color-text-options">#000000</span>
-                            </div>
+
+            <article class="box-filtros-img-options">
+                <h2>FILTROS</h2>
+
+                <div class="brillo-img-options box-filtros" id="box-filtros">
+                    <label for="brillo" class="label-filtros-img">BRILLO</label>
+                    <input type="range" name="brillo" id="brillo-filtros-img" class="input-filtros-img" min="0" max="1"
+                        value="1" step="0.1">
+                </div>
+
+                <div class="opacidad-img-options box-filtros" id="box-filtros">
+                    <label for="opacidad" class="label-filtros-img">OPACIDAD</label>
+                    <input type="range" name="opacidad" id="opacidad-filtros-img" class="input-filtros-img" min="0"
+                        max="1" value="1" step="0.1">
+                </div>
+
+                <div class="contraste-img-options box-filtros" id="box-filtros">
+                    <label for="contraste" class="label-filtros-img">CONTRASTE</label>
+                    <input type="range" name="contraste" id="contraste-filtros-img" class="input-filtros-img" min="0"
+                        max="1" value="100" step="0.1">
+                </div>
+
+                <div class="desenfoque-img-options box-filtros" id="box-filtros">
+                    <label for="desenfoque" class="label-filtros-img">DESENFOQUE</label>
+                    <input type="range" name="desenfoque" id="desenfoque-filtros-img" class="input-filtros-img" min="0"
+                        max="10" value="0" step="0.1">
+                </div>
+
+                <div class="escala-img-options box-filtros" id="box-filtros">
+                    <label for="escala" class="label-filtros-img">ESCALA DE GRISES</label>
+                    <input type="range" name="escala" id="escala-filtros-img" class="input-filtros-img" min="0"
+                        max="100" value="1" step="0.1" value="0">
+                </div>
+
+                <div class="sepia-img-options box-filtros" id="box-filtros">
+                    <label for="sepia" class="label-filtros-img">SEPIA</label>
+                    <input type="range" name="sepia" id="sepia-filtros-img" class="input-filtros-img" min="0" max="100"
+                        value="0" step="0.1">
+                </div>
+
+                <div class="hue-img-options box-filtros" id="box-filtros">
+                    <label for="hue" class="label-filtros-img">HUE</label>
+                    <input type="range" name="hue" id="hue-filtros-img" class="input-filtros-img" min="0" max="359"
+                        value="0" step="0.1">
+                </div>
+
+                <div class="saturado-img-options box-filtros" id="box-filtros">
+                    <label for="saturado" class="label-filtros-img">SATURADO</label>
+                    <input type="range" name="saturado" id="saturado-filtros-img" class="input-filtros-img" min="100"
+                        max="1000" value="100" step="10">
+                </div>
+
+                <div class="negativo-img-options box-filtros" id="box-filtros">
+                    <label for="negativo" class="label-filtros-img">NEGATIVO</label>
+                    <input type="range" name="negaivo" id="negativo-filtros-img" class="input-filtros-img" min="0"
+                        max="359" value="0" step="0.1">
+                </div>
+            </article>
+
+            <button class="restablecer-filtros-img-options" id="button-restablecer-filtros-img">RESTABLECER
+                FILTROS</button>
+        </section>
+
+        <!-- *** FIN SECCION DE IMAGEN *** -->
+
+        <!-- *** INICIO SECCION TEXTO *** -->
+
+        <section class="box-text-options" id="box-text-options">
+            <h2 class="title-tex-options">TEXTO</h2>
+
+            <article class="box-superior-text-options box-text-dark">
+                <h3 class="title-superior-text-options title-dark-text">SUPERIOR</h3>
+                <textarea class="top-text-options options-dark" id="top-text-options" aria-label="Texto superior"
+                    maxlength="45" size="10" style="resize: none;">TOP TEXT</textarea>
+                <div class="no-superior-text-options">
+                    <input type="checkbox" id="no-superior-text" name="no-superior-text"
+                        class="input-sin-texto-sup options-dark">
+                    <label for="no-superior-text" class="label-sin-texto-s">Sin texto superior</label>
+                </div>
+            </article>
+
+            <article class="box-inferior-text-options box-text-dark">
+                <h3 class="title-inferior-text-options title-dark-text">INFERIOR</h3>
+                <textarea class="bottom-text-options options-dark" id="bottom-text-options" aria-label="Texto inferior"
+                    maxlength="45" size="10" style="resize: none;">BOTTOM TEXT</textarea>
+                <div class="no-bottom-text-options">
+                    <input type="checkbox" id="no-bottom-text" name="no-bottom-text"
+                        class="input-sin-texto-i options-dark">
+                    <label for="no-bottom-text" class="label-sin-texto-i">Sin texto inferior</label>
+                </div>
+            </article>
+
+
+            <div class="box-titulo-fuente">
+                <h2 class="tittle-fuente-text-option" id="title-fuente-dark">FUENTE</h2>
+            </div>
+            <article class="box-fuente-text-options box-text-dark">
+                <select class="button-impact-text-options options-dark" id="button-fuentes-text"
+                    aria-label="opciones de fuentes">
+                    <option value="Arial">Arial</option>
+                    <option value="Arial Black">Arial Black</option>
+                    <option value="American Typerwriter">American Typerwriter</option>
+                    <option value="Andale Mono">Andale Mono</option>
+                    <option value="Comic Sans MS">Comic Sans MS</option>
+                    <option value="Helvetica">Helvetica</option>
+                    <option value="Impact">Impact</option>
+                    <option value="Verdana">Verdana</option>
+                    <option value="Times New Roman">Times New Roman</option>
+                </select>
+
+                <div class="box-tamaño-centrado-text">
+                    <div class="box-tamaño-text-option">
+                        <input type="number" name="tamaño-text-options" id="tamaño-fuente-text-options" min="12"
+                            value="40" aria-label="tamaño de fuente" class="input-tamaño-fuente options-dark">
+                    </div>
+
+                    <div class="box-centrado-text-options">
+                        <button class="button-left-text-options" id="button-left-text-options"
+                            aria-label="Alinear texto a la izquierda">
+                            <i class="fas fa-align-left"></i>
+                        </button>
+                        <button class="button-center-text-options" id="button-center-text-options"
+                            aria-label="alinear texto al centro">
+                            <i class="fas fa-align-center"></i>
+                        </button>
+                        <button class="button-right-text-options" id="button-right-text-options"
+                            aria-label="alinear texto a la derecha">
+                            <i class="fas fa-align-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+
+            <article class="box-color-fondo-text-options box-text-dark">
+                <div class="buttons-color-fondo-text-options">
+                    <div class="box-button-color-text-options">
+                        <h3 class="tittle-color-text-options title-dark-text">COLOR</h3>
+                        <div class="button-color-text-options options-dark">
+                            <input type="color" name="button-color-text" value="#000000" aria-label="Color de texto"
+                                class="input-color-texto" id="input-color-texto">
+                            <span class="color-text-options" id="color-text-options">#000000</span>
                         </div>
-                        
+                    </div>
 
-                        <div class="box-button-fondo-text-options">
-                            <h3 class="tittle-fono-text-options title-dark-text">FONDO</h3>
-                            <div class="button-fondo-text-options options-dark">
-                                <input type="color" name="button-fondo-text" value="#ffffff" aria-label="Color de fondo de texto" class="input-color-fondo-texto" id="input-color-fondo-texto">
-                                <span class="fondo-text-options" id="fondo-text-options">#ffffff</span>
-                            </div>
+
+                    <div class="box-button-fondo-text-options">
+                        <h3 class="tittle-fono-text-options title-dark-text">FONDO</h3>
+                        <div class="button-fondo-text-options options-dark">
+                            <input type="color" name="button-fondo-text" value="#ffffff"
+                                aria-label="Color de fondo de texto" class="input-color-fondo-texto"
+                                id="input-color-fondo-texto">
+                            <span class="fondo-text-options" id="fondo-text-options">#ffffff</span>
                         </div>
                     </div>
+                </div>
 
-                    <div class="box-transparent-text-options">
-                        <input type="checkbox" name="transparent" id="transparent-text-option" class="input-transparent-text options-dark">
-                        <label for="transparent" class="label-transparent-text">Fondo Transparente</label>
-                    </div>
-                </article>
+                <div class="box-transparent-text-options">
+                    <input type="checkbox" name="transparent" id="transparent-text-option"
+                        class="input-transparent-text options-dark">
+                    <label for="transparent" class="label-transparent-text">Fondo Transparente</label>
+                </div>
+            </article>
 
 
-                <article class="box-contorno-text-options box-text-dark">
-                    <h3 class="tittle-contorno-text-options title-dark-text">CONTORNO</h3>
-                    <div class="buttons-ninguno-claro-oscuro-text-options">
-                        <button class="button-ninguno-text-options" id="button-ninguno-text-options">Ninguno</button>
-                        <button class="button-claro-text-options" id="button-claro-text-options">Claro</button>
-                        <button class="button-oscuro-text-options" id="button-oscuro-text-options">Oscuro</button>
-                    </div>
-                </article>
+            <article class="box-contorno-text-options box-text-dark">
+                <h3 class="tittle-contorno-text-options title-dark-text">CONTORNO</h3>
+                <div class="buttons-ninguno-claro-oscuro-text-options">
+                    <button class="button-ninguno-text-options" id="button-ninguno-text-options">Ninguno</button>
+                    <button class="button-claro-text-options" id="button-claro-text-options">Claro</button>
+                    <button class="button-oscuro-text-options" id="button-oscuro-text-options">Oscuro</button>
+                </div>
+            </article>
 
-                <article class="box-espaciado-text-options box-text-dark">
-                    <h3 class="tittle-espaciado-text-options title-dark-text">ESPACIADO</h3>
-                    <input type="number" class="input-espaciado-number-text-options options-dark" id="espaciado-text-options" min="10" max="50" value="35" aria-label="Espaciado" >
-                </article>
+            <article class="box-espaciado-text-options box-text-dark">
+                <h3 class="tittle-espaciado-text-options title-dark-text">ESPACIADO</h3>
+                <input type="number" class="input-espaciado-number-text-options options-dark"
+                    id="espaciado-text-options" min="10" max="50" value="35" aria-label="Espaciado">
+            </article>
 
-                <article class="box-interlineado-text-options box-text-dark">
-                    <h3 class="tittle-interlineado-text-options title-dark-text">INTERLINEADO</h3>
-                    <select class="interlineado-text-options options-dark" id="interlineado-text-options" aria-label="Interlineado">
-                        <option value="0.8">0.8</option>
-                        <option value="1">1</option>
-                        <option value="1.2" selected>1.2</option>
-                        <option value="1.5">1.5</option>
-                        <option value="2">2</option>
-                        <option value="2.5">2.5</option>
-                    </select>
-                </article>
-            </section> 
+            <article class="box-interlineado-text-options box-text-dark">
+                <h3 class="tittle-interlineado-text-options title-dark-text">INTERLINEADO</h3>
+                <select class="interlineado-text-options options-dark" id="interlineado-text-options"
+                    aria-label="Interlineado">
+                    <option value="0.8">0.8</option>
+                    <option value="1">1</option>
+                    <option value="1.2" selected>1.2</option>
+                    <option value="1.5">1.5</option>
+                    <option value="2">2</option>
+                    <option value="2.5">2.5</option>
+                </select>
+            </article>
+        </section>
         </aside>
 
     </main>
     <script src="./js/app.js"></script>
     <script src="./js/descarga.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.js" integrity="sha512-wUa0ktp10dgVVhWdRVfcUO4vHS0ryT42WOEcXjVVF2+2rcYBKTY7Yx7JCEzjWgPV+rj2EDUr8TwsoWF6IoIOPg==" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js" integrity="sha512-Qlv6VSKh1gDKGoJbnyA5RMXYcvnpIqhO++MhIM2fStMcGT9i2T//tSwYFlcyoRRDcDZ+TYHpH8azBBCyhpSeqw==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.js"
+        integrity="sha512-wUa0ktp10dgVVhWdRVfcUO4vHS0ryT42WOEcXjVVF2+2rcYBKTY7Yx7JCEzjWgPV+rj2EDUr8TwsoWF6IoIOPg=="
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"
+        integrity="sha512-Qlv6VSKh1gDKGoJbnyA5RMXYcvnpIqhO++MhIM2fStMcGT9i2T//tSwYFlcyoRRDcDZ+TYHpH8azBBCyhpSeqw=="
+        crossorigin="anonymous"></script>
 
 </body>
+
 </html>
